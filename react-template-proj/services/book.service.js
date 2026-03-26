@@ -4,6 +4,7 @@ import { booksData } from "../services/books-data.service.js"
 
 const BOOK_KEY = 'bookDB'
 // var gFilterBy = { txt: '', minSpeed: 0 }
+const FOR_CHECK = 1;
 _createBooks()
 
 export const bookService = {
@@ -47,7 +48,7 @@ function getNextBookId(bookId) {
 
 function getEmptyBook(title = '', amount = 0) {
     return {
-        id: '', 
+        id: '',
         title,
         listPrice: { amount, currencyCode: "EUR", isOnSale: false }
     }
